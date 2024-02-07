@@ -11,7 +11,7 @@ const btn = document.querySelector(".apply-button");
 
 selectTimezone()
 btn.addEventListener("click", selectTimezone)
-btn.addEventListener("touch", selectTimezone)
+btn.addEventListener("touchend", selectTimezone)
 
 function selectTimezone() {
   switch (select.value) {
