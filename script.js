@@ -9,9 +9,9 @@ const timeZone = document.querySelector(".timezone");
 const select = document.querySelector(".seletor");
 const btn = document.querySelector(".apply-button");
 
-selectTimezone()
-btn.addEventListener("click", selectTimezone)
-btn.addEventListener("touchend", selectTimezone)
+selectTimezone();
+btn.addEventListener("click", selectTimezone);
+btn.addEventListener("touchstart", selectTimezone);
 
 function selectTimezone() {
   switch (select.value) {
@@ -37,15 +37,19 @@ function selectTimezone() {
       timezone = "America/Sao_Paulo";
       break;
   }
-const now = dayjs().tz(timezone).format("HH:mm:ss");
-let dayWeek = dayjs().tz(timezone).format("dddd");
-let dayMonth = dayjs().tz(timezone).format("DD");
-let month = dayjs().tz(timezone).format("MMMM");
-let year = dayjs().tz(timezone).format("YYYY");
-dayWeek = dayWeek.charAt(0).toUpperCase() + dayWeek.slice(1);
-month = month.charAt(0).toUpperCase() + month.slice(1);
-
-hour.textContent = now;
-date.textContent = `${dayWeek}, ${dayMonth} de ${month} de ${year}`;
-timeZone.textContent = timezone;
 }
+
+function timeNow() {
+  const now = dayjs().tz(timezone).format("HH:mm:ss");
+  let dayWeek = dayjs().tz(timezone).format("dddd");
+  let dayMonth = dayjs().tz(timezone).format("DD");
+  let month = dayjs().tz(timezone).format("MMMM");
+  let year = dayjs().tz(timezone).format("YYYY");
+  dayWeek = dayWeek.charAt(0).toUpperCase() + dayWeek.slice(1);
+  month = month.charAt(0).toUpperCase() + month.slice(1);
+
+  hour.textContent = now;
+  date.textContent = `${dayWeek}, ${dayMonth} de ${month} de ${year}`;
+  timeZone.textContent = timezone;
+}
+setInterval(timeNow, 1000);
