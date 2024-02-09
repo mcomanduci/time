@@ -1,0 +1,47 @@
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+  }
+
+  .subcontainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .subcontainer .hour {
+    font-size: 95px;
+  }
+
+  .hour {
+    max-width: 100%;
+    width: 350px;
+    padding-left: 0;
+  }
+
+  .select-zone {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .date {
+    margin: 0;
+    margin-bottom: 80px;
+    text-align: center;
+    width: 100%;
+  }
+
+
+
+  .apply-button {
+    height: 30px;
+    font-family: "Protest Riot", sans-serif;
+    border: none;
+    background-color: #fff;
+    font-size: 16px;
+  }
+
+}
