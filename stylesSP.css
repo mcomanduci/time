@@ -20,11 +20,12 @@
   }
 
   .hour {
-    font-size: 65px;
-    text-align: center;
+    margin-left: 10px;
+    font-size: 70px;
+    text-align: left;
     max-width: 100%;
-    width: 350px;
     padding-left: 0;
+    letter-spacing: 2px;
   }
 
   .select-zone {
